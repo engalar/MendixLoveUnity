@@ -1,8 +1,8 @@
 mergeInto(LibraryManager.library, {
   ClickObject: function (name, score) {
-    ReactUnityWebGL.ClickObject(Pointer_stringify(name), score);
+    window.dispatchReactUnityEvent("ClickObject", UTF8ToString(name), score);
   },
   GameOver: function (userName, score) {
-    ReactUnityWebGL.GameOver(Pointer_stringify(userName), score);
+    window.dispatchReactUnityEvent("GameOver", UTF8ToString(userName), score);
   },
 });
